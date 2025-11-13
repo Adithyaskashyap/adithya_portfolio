@@ -1,0 +1,344 @@
+/* ---------- General Reset ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  color: #383838;
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* ---------- Navbar ---------- */
+header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0078d7;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #0078d7;
+}
+
+.toggle-theme {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+/* ---------- Home Section ---------- */
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 90vh;
+  padding: 2rem;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+}
+
+.home-text {
+  max-width: 500px;
+}
+
+.home-text h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.home-text h2 span {
+  color: #0078d7;
+}
+
+.home-text h3 {
+  font-weight: 400;
+  color: #444446;
+}
+
+.home-img {
+  width: 320px;
+  height: 365px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #111; /* dark background helps neon pop */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.home-img:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px 5px #00f7ff, 0 0 40px 10px #00f7ff; /* neon glow */
+}
+
+.home-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+.home-img:hover img {
+  transform: scale(1.05); /* slight zoom for effect */
+}
+
+
+.btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background-color: #0078d7;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #005ea6;
+}
+
+/* ---------- Section Styling ---------- */
+section {
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+section h2 {
+  text-align: center;
+  color: #0078d7;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+/* ---------- About ---------- */
+.about p {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: justify;
+  color: #000000;
+  font-size: 1rem;
+}
+
+/* ---------- Skills ---------- */
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.skill {
+  background-color: #e6f2ff;
+  border: 1px solid #0078d7;
+  border-radius: 20px;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  color: #0078d7;
+  transition: all 0.3s ease;
+}
+
+.skill:hover {
+  background-color: #0078d7;
+  color: #fff;
+}
+
+/* ---------- Projects ---------- */
+.projects p {
+  text-align: left;
+  color: #000000;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.project {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+}
+
+.project img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+}
+
+/* ---------- Education ---------- */
+.education-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.education-box {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.education-box h3 {
+  color: #0078d7;
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- Certifications ---------- */
+.certifications ul {
+  max-width: 700px;
+  margin: 0 auto;
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: #444;
+}
+
+/* ---------- Contact ---------- */
+.contact {
+  text-align: center;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.contact-links a {
+  color: #0078d7;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-links a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: #0078d7;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+
+/* ---------- Dark Mode ---------- */
+body.dark-mode {
+  background-color: #1c1c1c;
+  color: #eee;
+}
+
+body.dark-mode header {
+  background-color: #262626;
+}
+
+body.dark-mode .nav-links a {
+  color: #ddd;
+}
+
+body.dark-mode .nav-links a:hover {
+  color: #80bfff;
+}
+
+body.dark-mode .skill {
+  background-color: #222;
+  border-color: #80bfff;
+  color: #80bfff;
+}
+
+body.dark-mode .education-box,
+body.dark-mode .project {
+  background-color: #262626;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode footer {
+  background-color: #111;
+}
+/* Make all paragraph and non-heading text white in dark mode */
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode a,
+body.dark-mode span,
+body.dark-mode .about p,
+body.dark-mode .projects p,
+body.dark-mode .education-box p,
+body.dark-mode .certifications ul,
+body.dark-mode .contact,
+body.dark-mode .contact-links a {
+  color: #ffffff;
+}
+
+/* Keep headings bright blue or their existing color */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5 {
+  color: #80bfff; /* same accent blue as links */
+}
+
+/* Optional: make link hover a bit softer in dark mode */
+body.dark-mode .contact-links a:hover {
+  color: #a8d8ff;
+}
